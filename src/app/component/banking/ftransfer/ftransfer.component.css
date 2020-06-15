@@ -1,0 +1,46 @@
+.invalid-form {
+    color: red;
+}
+
+.form-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+}
+.select {
+    padding: 8px;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    display: block;
+}
+
+.input {
+    padding: 8px;
+    width: 50%;    
+    border: none;
+    border-bottom: 1px solid #ccc;
+    display: block;
+}
+
+.border {
+    border: 1px solid #ccc!important
+}
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  body {
+    background: #fff url('../../../../assets/images_user_reg/bg_1.jpg') repeat top left;
+}

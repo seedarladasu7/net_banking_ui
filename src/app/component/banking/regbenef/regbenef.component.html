@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    
+    <section id="container">
+        <h1><b><i>Register Beneficiary</i></b></h1>
+        <div *ngIf="regStatus !== ''" class="user-reg-success">
+            {{regStatus}}
+        </div>
+        <div id="wrapper-form">
+            <form id="benef-reg-form" [formGroup]="beneficiaryForm"  autocomplete="none">
+                <div id="wrapping" class="clearfix">
+                    <section id="aligned">                        
+                        <div *ngIf="isBenefFormSubmitted && beneficiaryForm.controls.benefNickName.errors" class="invalid-form">
+                            <p *ngIf="beneficiaryForm.controls.benefNickName.errors.required">First name is required</p>
+                        </div>
+                        <input type="text" name="benefNickName" formControlName="benefNickName" id="benefNickName" placeholder="beneficiary Nick Name" autocomplete="none" tabindex="1" class="txtinput" />
+
+                        <div *ngIf="isBenefFormSubmitted && beneficiaryForm.controls.benefAcctNo.errors" class="invalid-form">
+                            <p *ngIf="beneficiaryForm.controls.benefAcctNo.errors.required">Beneficiary account no is required</p>
+                            <p *ngIf="beneficiaryForm.controls.benefAcctNo.errors.minlength">Account no must be 10 chars min</p>
+                            <p *ngIf="beneficiaryForm.controls.benefAcctNo.errors.maxlength">Account no must be 12 chars min</p>
+                        </div>
+                        <input type="text" name="benefAcctNo" formControlName="benefAcctNo" id="benefAcctNo" placeholder="Beneficiary account no" autocomplete="none" tabindex="2" class="txtinput" />
+
+                        <div *ngIf="isBenefFormSubmitted && beneficiaryForm.controls.benefMobileNo.errors" class="invalid-form">
+                            <p *ngIf="beneficiaryForm.controls.benefMobileNo.errors.required">Mobile no is required</p>
+                            <p *ngIf="beneficiaryForm.controls.benefMobileNo.errors.minlength">Mobile no should be minimum 10 chars</p>
+                            <p *ngIf="beneficiaryForm.controls.benefMobileNo.errors.pattern">Mobile no should be maximum 13 chars</p>
+                        </div>
+                        <input type="text" name="benefMobileNo" formControlName="benefMobileNo" id="benefMobileNo" placeholder="Phone number" autocomplete="none" tabindex="3" class="txtinput" />                        
+                    </section>
+                </div>
+                <section id="buttons">
+                    <input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset" on-click="clearUserRegForm()"/>
+                    <button name="submit" id="submitbtn" class="submitbtn" tabindex="7" on-click="registerBeneficiary()">Submit this!</button>
+                    <br style="clear:both;">
+                </section>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

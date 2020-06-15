@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <title>Login with HTML5 and CSS3</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <div id="container_demo">
+                <div id="wrapper">
+                    <div id="login" class="animate form">
+                        <form #loginRef="ngForm" (ngSubmit)="submitLoginForm(loginRef)" autocomplete="off">
+                            <h1>Log in</h1>
+                            <p>
+                                <label for="userEmail"> Your name
+                                    <div *ngIf="isLoginFormSubmitted && userName.invalid" class="invalid-form">
+                                        <p *ngIf="userName.errors.required">User name is required</p>
+                                        <p *ngIf="userName.errors.minlength">User name must be 3 chars minimum</p>
+                                        <!-- <p *ngIf="userEmail.errors.pattern">Email must be valid and of either GMAIL/ABC
+                                            mail id</p> -->
+                                    </div>
+                                </label>
+                                <input id="userName" name="userName" required="required" type="text" minlength="3"
+                                    placeholder="myname" [(ngModel)]="model.userName" #userName="ngModel"
+                                    required autofocus />
+                            </p>
+                            <p>
+                                <label for="pwd"> Your password
+                                    <div *ngIf="isLoginFormSubmitted && pwd.invalid" class="invalid-form">
+                                        <p *ngIf="pwd.errors.required">Password is required</p>
+                                        <p *ngIf="pwd.errors.minlength">Password length should be minimum 8 chars</p>
+                                        <p *ngIf="pwd.errors.pattern">Password must have alphanumerics with atleast one
+                                            Uppercase, one lowercase, one number and one special char</p>
+                                    </div>
+                                </label>
+                                <input id="pwd" name="pwd" required="required" type="password"
+                                    placeholder="eg. X8df!90EO" [(ngModel)]="model.pwd" #pwd="ngModel" minlength="8"
+                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                    required />
+                            </p>
+                            <p class="login button">
+                                <button>Login User</button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

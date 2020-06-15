@@ -1,0 +1,42 @@
+<!-- =====================Personal======================================
+
+<div *ngIf="acctTxnInfo != null && acctTxnInfo != undefined && acctTxnInfo.length > 0">
+    <div *ngFor="let txn of acctTxnInfo">
+        {{txn.acctId}}::{{txn.txnType}}::{{txn.txnDate}}::{{txn.txmAmount}}
+    </div>
+</div>
+
+"acctId": 1,
+      "txnType": "debit",
+      "txnDate": "2020-06-11T12:12:27.285Z",
+      "txmAmount": "100",
+      "id": 2
+===========================================================<br /> -->
+
+<div style="width: 100%; float: left;">
+    <div div *ngIf="acctTxnInfo.length > 0" style="float: left;">
+        <h2 class="order-header" style="margin-left: 250px;">Transaction History</h2>
+    </div>
+</div>
+<div class="content-block">
+    <div *ngIf="acctTxnInfo.length > 0" style="float: left; width: 60%; margin-left: 250px;">
+        <div class="container">
+            <ul class="responsive-table">
+                <li class="table-header">
+                    <div class="col col-1">Acct_Id</div>
+                    <div class="col col-2">Type</div>
+                    <div class="col col-3">Txn_Date</div>
+                    <div class="col col-4">Txn_Time</div>
+                    <div class="col col-5">Txn_Amount(₹)</div>
+                </li>
+                <li class="table-row" *ngFor="let txn of acctTxnInfo; trackBy: trackTransactionId">
+                    <div class="col col-1" data-label="Id">{{txn.acctId}}</div>
+                    <div class="col col-2" data-label="Type">{{txn.txnType}}</div>                    
+                    <div class="col col-3" data-label="Date">{{txn.txnDate | date: "mediumDate" }}</div>
+                    <div class="col col-4" data-label="Time">{{txn.txnDate | date: "shortTime" }}</div>                    
+                    <div class="col col-5" data-label="Txn-Amount">₹{{txn.txmAmount}}</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

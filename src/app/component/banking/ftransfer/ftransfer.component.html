@@ -1,0 +1,32 @@
+<form id="f-transfer-form" [formGroup]="transferFunds" (ngSubmit)="transferFundsToBenef()" autocomplete="none"  class="form-container">
+    <div>        
+        <div *ngIf="bankAccount !== null && bankAccount !== undefined">
+            <p><label>Transfer from:</label></p>
+            <h3>{{bankAccount.accNumber}}</h3>
+        </div>
+    </div>
+    <div>
+        <p><label>Beneficiary name:</label></p>
+       <select name="beneficiaryAcc" formControlName="beneficiaryAcc"  class="select border " >
+            <option *ngFor="let account of beneficiaryAccInfo; trackBy: trackByAccountId" [value]="account.id">
+                {{account.accHodlerName}}, {{account.accNumber}}
+            </option>
+        </select>
+        <div *ngIf="isUserFormSubmitted && transferFunds.controls.beneficiaryAcc.errors" class="invalid-form">
+            <p *ngIf="transferFunds.controls.beneficiaryAcc.errors.required">Please select beneficiary</p>
+        </div>
+    </div>
+    <div>
+        <p><label>Amount to transfer(₹):</label></p>
+        <input type="number" name="amount" formControlName="amount"  class="input border" />
+        <div *ngIf="isUserFormSubmitted && transferFunds.controls.amount.errors" class="invalid-form">
+            <p *ngIf="transferFunds.controls.amount.errors.required">Enter valid amount</p>            
+            <p *ngIf="transferFunds.controls.amount.errors.pattern">Enter Correct amount</p>
+            <p *ngIf="transferFunds.controls.amount.errors.minumumCheck">Amount should be 1 rs minumum</p>
+        </div>
+    </div>
+    <div>
+        <button class="btn">Transfer</button>
+    </div>
+
+</form>

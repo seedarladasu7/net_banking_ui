@@ -1,0 +1,40 @@
+nav {
+    background-color: #232f3e;
+}
+
+nav ul, nav div div ul {
+    margin: 20px;
+    width: 90%;
+    padding: 10px;
+}
+
+ul li {
+    display: inline;
+    /* background-color: #232f3e; */
+    padding: 5px;
+    margin: 15px;
+    text-decoration: none;
+}
+
+ul li:hover {
+    /* background: -webkit-linear-gradient(top, #fff 0, #e2e0e0 100%); */
+    cursor: pointer;
+}
+
+ul li a, div div ul li a {
+    color: #ffffff;
+}
+
+ul li a:hover {
+    border: 1px solid white;
+    padding: 5px;
+    /* border-color: rgba(215, 229, 230, 0.801);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(215, 229, 230, 0.801);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(215, 229, 230, 0.801);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(215, 229, 230, 0.801);
+    outline: 0 none; */
+}
+
+.user-info {
+    color: white;
+}

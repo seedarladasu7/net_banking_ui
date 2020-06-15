@@ -1,0 +1,27 @@
+td,
+th {
+    /* border: 1px solid rgb(190, 190, 190); */
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;    
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    /* font-size: .8rem; */
+}
+
+.header-key {
+    /* width: 20%; */
+    font-size:30px;
+    font-weight: bold;
+    /* color:red; */
+}
+.header-value {
+    width: 40%;
+}
+
+body {
+    background: #fff url('../../../../assets/images_user_reg/bg_1.jpg') repeat top left;
+}
+

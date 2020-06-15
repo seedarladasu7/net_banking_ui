@@ -1,0 +1,153 @@
+{
+  "user": [
+    {
+      "name": "Dasu Seedarla",
+      "email": "s.mariyadasu@gmail.com",
+      "userName": "mariyadasu",
+      "pwd": "Abc123$%",
+      "mobileNo": "9493923142",
+      "address": "Hyderabad - 18",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "name": "Chinna Seedarla",
+      "email": "s.chinna@gmail.com",
+      "userName": "chinna",
+      "pwd": "Abc123$%",
+      "mobileNo": "9441482153",
+      "address": "Narasaraopet - 16",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "name": "Nani S",
+      "email": "s.nani@gmail.com",
+      "userName": "nani",
+      "pwd": "Abc123$%",
+      "mobileNo": "9493923120",
+      "address": "Guntur - 10",
+      "gender": "male",
+      "id": 3
+    },
+    {
+      "name": "Samson S",
+      "email": "s.samson@gmail.com",
+      "userName": "samson",
+      "pwd": "Abc123$%",
+      "mobileNo": "9493923122",
+      "address": "Ponnur - 24",
+      "gender": "male",
+      "id": 4
+    },
+    {
+      "name": "Kiran K",
+      "email": "k.kiran@gmail.com",
+      "userName": "kiran",
+      "pwd": "Abc123$%",
+      "mobileNo": "9493923123",
+      "address": "Ponnur - 24",
+      "gender": "male",
+      "id": 5
+    },
+    {
+      "name": "Raju P",
+      "email": "p.raju@gmail.com",
+      "userName": "raju",
+      "pwd": "Abc123$%",
+      "mobileNo": "9493923124",
+      "address": "Guntur - 10",
+      "gender": "male",
+      "id": 6
+    }
+  ],
+  "account": [
+    {
+      "accName": "ICICI Bank",
+      "accHodlerName": "Dasu Seedarla",
+      "mobileNo": "9493923142",
+      "accNumber": "1234567890",
+      "openingBal": "8000",
+      "active": "yes",
+      "userId": "1",
+      "id": 1
+    },
+    {
+      "accName": "SBI Bank",
+      "accHodlerName": "Chinna Seedarla",
+      "mobileNo": "9441482153",
+      "accNumber": "1234567891",
+      "openingBal": "12000",
+      "active": "yes",
+      "userId": "2",
+      "id": 2
+    },
+    {
+      "accName": "Canara Bank",
+      "accHodlerName": "Nani S",
+      "mobileNo": "9493923120",
+      "accNumber": "1234567892",
+      "openingBal": "10000",
+      "active": "yes",
+      "userId": "3",
+      "id": 3
+    },
+    {
+      "accName": "SBI Bank",
+      "accHodlerName": "Samson S",
+      "mobileNo": "9493923122",
+      "accNumber": "1234567893",
+      "openingBal": "10000",
+      "active": "yes",
+      "userId": "4",
+      "id": 4
+    },
+    {
+      "accName": "ICICI Bank",
+      "accHodlerName": "Kiran K",
+      "mobileNo": "9493923123",
+      "accNumber": "1234567894",
+      "openingBal": "10000",
+      "active": "yes",
+      "userId": "5",
+      "id": 5
+    },
+    {
+      "accName": "Axis Bank",
+      "accHodlerName": "Raju P",
+      "mobileNo": "9493923124",
+      "accNumber": "1234567895",
+      "openingBal": "10000",
+      "active": "yes",
+      "userId": "6",
+      "id": 6
+    }
+  ],
+  "beneficiary": [
+    {
+      "userId": "1",
+      "acctId": "1",
+      "benefAcctId": "2",
+      "benefUserId": "2",
+      "benefNickName": "Chinna_S",
+      "addedOn": "2020-06-12T12:02:43.685Z",
+      "id": 1
+    }
+  ],
+  "transaction": [
+    {
+      "acctId": 2,
+      "txnType": "credit",
+      "txnDate": "2020-06-12T12:04:56.964Z",
+      "txmAmount": "2000",
+      "id": 1
+    },
+    {
+      "acctId": 1,
+      "txnType": "debit",
+      "txnDate": "2020-06-12T12:04:56.967Z",
+      "txmAmount": "2000",
+      "id": 2
+    }
+  ]
+}

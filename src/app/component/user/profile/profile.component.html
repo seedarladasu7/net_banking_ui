@@ -1,0 +1,36 @@
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+<table>
+    <tr *ngFor="let user of loggedInUser | keyvalue">
+        <ng-container *ngIf="user.key ==='name'">
+            <td class="header-key">User Name:</td>
+            <td class="header-value">{{user.value}}</td>
+        </ng-container>
+        <ng-container *ngIf="user.key ==='email'">
+            <td class="header-key">Email:</td>
+            <td class="header-value">{{user.value}}</td>
+        </ng-container>
+        <ng-container *ngIf="user.key ==='mobileNo'">
+            <td class="header-key">Mobile No:</td>
+            <td class="header-value">{{user.value}}</td>
+        </ng-container>
+        <ng-container *ngIf="user.key ==='address'">
+            <td class="header-key">Address:</td>
+            <td class="header-value">{{user.value}}</td>
+        </ng-container>
+    </tr>
+
+    <tr *ngFor="let acc of account | keyvalue">
+        <ng-container *ngIf="acc.key ==='accNumber'">
+            <td class="header-key">Account Number:</td>
+            <td class="header-value">{{acc.value}}</td>
+        </ng-container>
+        <ng-container *ngIf="acc.key ==='openingBal'">
+            <td class="header-key">Balance:</td>
+            <td class="header-value">₹ {{acc.value}}</td>
+        </ng-container>
+        <ng-container *ngIf="acc.key ==='active'">
+            <td class="header-key">Acc status:</td>
+            <td class="header-value">{{acc.value}}</td>
+        </ng-container>
+    </tr>
+</table>

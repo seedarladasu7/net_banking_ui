@@ -1,0 +1,25 @@
+<nav>
+    <ul>
+        <ng-container *ngIf="userLoginFlag === undefined || userLoginFlag === 'false'">
+            <li><a routerLink="/login">User Login</a></li>
+        </ng-container>
+        <ng-container *ngIf="userLoginFlag !== undefined && userLoginFlag === 'true'">
+            <li><a routerLink="/profile">Profile</a></li>
+            <li><a routerLink="/reg-benef">Add Beneficiary</a></li>
+            <li><a routerLink="/transfer">Fund Transfer</a></li>
+            <li><a routerLink="/transaction">Transactions</a></li>
+            <li><a on-click="logoutUser()">Logout</a></li>
+        </ng-container>
+        <ng-container *ngIf="loggedInUser !== null && loggedInUser !== undefined && loggedInUser !== ''">
+            <li *ngIf="loggedInUser.gender !== undefined && loggedInUser.gender === 'male'">
+                <img src="assets/images-user-login/male_1.jpg" alt="user-male" style="margin-left: 400px; border-radius: 50%;"/>
+            </li>
+            <li *ngIf="loggedInUser.gender !== undefined && loggedInUser.gender === 'female'">
+                <img src="assets/images-user-login/female_1.jpg" alt="user-female" style="margin-left: 400px; border-radius: 50%;"/>
+            </li>
+            <li class="user-info" style="margin: -15px;">
+                Hi {{loggedInUser.name}}!
+            </li>
+        </ng-container>
+    </ul>
+</nav>
